@@ -1,0 +1,244 @@
+:root{
+    --color-primary: #0080FF;
+    --color-dark: black;
+    --color-gray: #F8F8FF;
+    --color-light: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    background: var(--color-gray);
+    
+}
+
+/* PARTE DEL NAV */
+.nav{
+    display: grid;
+    grid-template-columns: minmax(200px, 900px) 1fr; /*1fr es el 50%*/
+    background: var(--color-primary);
+    width: 100%;
+    height: 4rem;
+}
+
+.nav_foto {
+        display: inline-block;
+        width: 15%; /*TamaÃ±o maximo de la columna*/
+        height: 65%; /*Alto maximo de la fila*/
+        padding-left: 3rem;
+        margin-top: 0.6rem;
+        margin-bottom: 0.5rem;
+}
+
+.nav_input{
+    width: 30%; /*TamaÃ±o maximo de la columna*/
+    height: 58%; /*Alto maximo de la fila*/
+    color: black;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin-left: 25rem;
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
+    
+}
+
+.nav_input::placeholder {
+    color: blue;
+    padding-left: 0.8rem;
+  }
+
+  /* PARTE DE LA INFORMACION DEL USUARIO */
+
+  .seccion {
+        display: grid;
+        grid-template-columns: minmax(100px, 200px) 1fr 1fr; /*1fr es el 50%*/
+        background:white;
+        max-width: 100%;
+        max-height: 100%;
+        margin: 6rem;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+  }
+
+  .secc_info{
+    padding: 1rem;
+    margin-left: 3.5rem;
+  }
+
+/*FOTO*/
+  .secc_foto{
+    display: inline-block;
+    width: 90%; /*Tamaño maximo de la columna*/
+    height: 75%; /*Alto maximo de la fila*/
+    border-radius: 100%;
+    border: 4px solid var(--color-primary);
+    padding: 0.2rem;    
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  /*INFO*/
+  .secc_contenido{
+    display: block;
+    line-height: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .secc_info h1{
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+}
+
+.secc_contenido{
+  font-size: 1.2rem;
+}
+
+  .secc_contenido a {
+    text-decoration: none; /*Sin subrayar*/
+    color: var(--color-dark);
+  }
+
+  .secc_boton{
+   grid-column: 3;
+  }
+
+  .secc_bot{
+    background: var(--color-primary);
+    color: var(--color-light);
+    border-radius: 0.3rem;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 11rem;
+    margin-left: 25rem;
+  }
+
+  .secc_contenido_trabajo{
+    color: #737171;
+    font-size: 1rem;
+  }
+
+  .negrita{
+    color: #545050;
+    font-weight: 700;
+  }
+
+  /* PARTE DEL BLOG */
+
+  .blog{
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+
+  .articulo {
+    grid-column: 1;
+    background: var(--color-light);
+    max-width: 70%;
+    height: 60rem;
+    margin-left: 6rem;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .articulo_tiempoPublicado{
+    font-size: 0.85rem;
+    color: #2C2828;
+    margin-bottom: 1rem;
+  }
+
+.articulo_img{
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+.articulo_boton{
+    background:#F6F4F4  ;
+    color: var(--color-primary);
+    border-radius: 0.3rem;
+    border: none;
+    padding: 0.5rem;
+    font-weight: 900;
+    margin-bottom: 0.7rem;
+}
+
+.articulo_comentario{
+  font-size: 1.2rem;
+  color: #2C2828;
+  margin-bottom: 1rem;
+}
+
+.articulo_advertencia{
+  display: none;
+  color:red;
+}
+
+.articulo_input{
+  border-radius: 0.3rem;
+  color: black;
+  border-radius: 0.5rem;
+  border: none;
+  width: 82%;
+  height: 8%;
+  background: #F6F4F4;
+  padding: 1rem; 
+}
+
+.articulo_input::placeholder {
+  color: black;
+  padding-left: 1rem;
+}
+
+.articulo_likes{
+  padding-left: 21rem;
+}
+
+.likes_count {
+  color: black;
+  font-weight: bold;
+}
+
+.articulo_bot{
+  background: var(--color-primary);
+  color: var(--color-light);
+  border-radius: 0.3rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+.aritulo_boton_likes{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/*BOTON ELIMINAR*/
+button.eliminar {
+  color: red;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  background: var(--color-primary);
+  background:#F6F4F4  ;
+  border: none;
+  padding: 0.3rem;
+  margin-bottom: 0.7rem;
+}
+
+  /*PARTE DEL ASIDE*/
+  .aside {
+    grid-column: 2;
+    background: var(--color-light);
+    height: 40rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    max-width: 70%;
+    max-height: 30%;
+    margin-left: 0.2rem;
+  }

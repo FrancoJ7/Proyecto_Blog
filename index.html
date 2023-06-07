@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="blog_styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLOBO</title>
+</head>
+<body>
+  
+    <main>
+
+          <!-- PARTE DEL NAVEGADOR -->
+
+      <nav class="nav">
+        <img class="nav_foto" src="Imagenes/imagen.png" alt="Imagen de globo">
+        <form class="nav_for">
+        <input class="nav_input" type="text" id="inputUsuario" placeholder="Ingresar usuario..."> 
+        </form>
+      </nav>
+
+        <!-- PARTE DE LA INFORMACION DEL USUARIO -->
+
+      <section class="seccion">
+        <div class="secc_contenedor">
+          <img class="secc_foto" src="Imagenes\imagen2.jpeg" alt="Imagen de usuario" width="200">
+        </div>
+
+        <div class="secc_info">
+
+          <h1>Jane Doe</h1>
+
+          <div class="secc_contenido">
+
+            <a href="malito:jane_doe@email.com"><strong>Email:</strong> jane_doe@email.com</a>
+            <p ><time  datetime="1991-07-26"><strong>Fecha de nacimiento:</strong> 01/05/1996</time> </p>
+            <a href="tel:918-936-9585"><strong>Telefono:</strong> 918-936-9585</a>
+            <p><strong>Ciudad:</strong> Tokio, Japon</p>
+            <p class="secc_contenido_trabajo">Trabajando en <span class="negrita">Lawn N </span></p>
+
+          </div>
+        </div>
+          
+          <div class="secc_boton">
+            <button type="submit" class="secc_bot" id="btnSeguir" onclick="cambiarEstado()">Seguir</button>
+          </div>
+         
+      </section>
+
+    <section class="blog">
+      <!-- PARTE DEL BLOG -->
+
+      <article class="articulo">
+        <p class="articulo_tiempoPublicado">Publicado hace 1 semana</p>
+        <img class="articulo_img" src="Imagenes\tokio.jpeg" alt="Imangen tokio" width="200"> <br/>
+        
+        <div class="aritulo_boton_likes">
+          <button type="submit" class="articulo_boton" onclick="meGusta()">Me gusta</button> 
+          <p class="articulo_likes"><span id="numLikes" class="likes_count">200</span> likes</p>
+        </div>
+        
+        <p class="articulo_comentario">Comentarios</p>
+
+        <p><strong>Juan Perez</strong> ¡Wow, esa foto de tokio es impresionante! </p> <br>
+        <p><strong>Kathleen J Rennie</strong> ¡Esta foto de Tokio es simplemente espectacular! Me trae tantos recuerdos.</p> <br>
+        
+        
+        <span id="advertencia" class="articulo_advertencia">Por favor, complete los comentarios.</span>
+       
+        <div id="comentario"> </div>
+
+        <input class="articulo_input" id="inputComentario" placeholder="Deja tu comentario...">
+        
+        <button type="submit" onclick="comentar()" class="articulo_bot">Comentar</button>
+      
+      </article>
+
+      <!-- PARTE DEL ARTICULO DEL BLOG-->
+
+      <aside class="aside">
+        <h2 class="aside_titulo">Sobre mi</h2>
+        <p class="aside_contenido">¡Hola a todos! Soy Jane, y actualmente
+            vivo en la vibrante y emocionante 
+            ciudad de Tokio, Japon. Me encanta
+            capturar la esencia de la vida urbana a
+            traves de mi lente, explorando el
+            constraste entre la arquitectura
+            moderna y las tradiciones centenarias
+            que conviven en esta metropolis 
+            unica. Desde rascacielos 
+            deslumbrantes y calles bulliciosas
+            hasta templos serenos y jardines
+            tranquilos, enucneto inspiracion en
+            cada rincon de esta increible ciudad.
+          </p>
+      </aside>
+
+    </section>
+
+    </main>
+</body>
+</html>
