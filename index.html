@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="blog_styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/vue@3.3.2/dist/vue.global.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>GLOBO</title>
 </head>
 <body>
@@ -24,9 +25,11 @@
 
         <!-- PARTE DE LA INFORMACION DEL USUARIO -->
 
+<div id='app'>
+
       <section class="seccion">
         <div class="secc_contenedor">
-          <img class="secc_foto" src="Imagenes\imagen2.jpeg" alt="Imagen de usuario" width="200">
+          <img class="secc_foto" :src="imagen_Blog" alt="Imagen de usuario" width="200">
         </div>
 
         <div class="secc_info">
@@ -35,10 +38,10 @@
 
           <div class="secc_contenido">
 
-            <a href="malito:jane_doe@email.com"><strong>Email:</strong> jane_doe@email.com</a>
-            <p ><time  datetime="1991-07-26"><strong>Fecha de nacimiento:</strong> 01/05/1996</time> </p>
-            <a href="tel:918-936-9585"><strong>Telefono:</strong> 918-936-9585</a>
-            <p><strong>Ciudad:</strong> Tokio, Japon</p>
+            <a :href="email_url"><strong>Email:</strong> {{ email }}</a>
+            <p ><time  :datetime="tipo_Fecha"><strong>Fecha de nacimiento:</strong> {{ nacimiento }}</time> </p>
+            <a :href="telefono"><strong>Telefono:</strong> {{ numeroDeTelefono }}</a>
+            <p><strong>Ciudad:</strong> {{ciudad}}</p>
             <p class="secc_contenido_trabajo">Trabajando en <span class="negrita">Lawn N </span></p>
 
           </div>
@@ -54,8 +57,8 @@
       <!-- PARTE DEL BLOG -->
 
       <article class="articulo">
-        <p class="articulo_tiempoPublicado">Publicado hace 1 semana</p>
-        <img class="articulo_img" src="Imagenes\tokio.jpeg" alt="Imangen tokio" width="200"> <br/>
+        <p class="articulo_tiempoPublicado">{{tiempo_Publicacion}}</p>
+        <img class="articulo_img" :src="imagen_Blog" alt="Imangen tokio" width="200"> <br/>
         
         <div class="aritulo_boton_likes">
           <button type="submit" class="articulo_boton" onclick="meGusta()">Me gusta</button> 
@@ -81,24 +84,16 @@
       <!-- PARTE DEL ARTICULO DEL BLOG-->
 
       <aside class="aside">
-        <h2 class="aside_titulo">Sobre mi</h2>
-        <p class="aside_contenido">¡Hola a todos! Soy Jane, y actualmente
-            vivo en la vibrante y emocionante 
-            ciudad de Tokio, Japon. Me encanta
-            capturar la esencia de la vida urbana a
-            traves de mi lente, explorando el
-            constraste entre la arquitectura
-            moderna y las tradiciones centenarias
-            que conviven en esta metropolis 
-            unica. Desde rascacielos 
-            deslumbrantes y calles bulliciosas
-            hasta templos serenos y jardines
-            tranquilos, enucneto inspiracion en
-            cada rincon de esta increible ciudad.
-          </p>
+        <h2 class="aside_titulo">{{titulo_Aside}}</h2>
+        <p class="aside_contenido">{{descripcion}}</p>
       </aside>
 
     </section>
+</div>
+
+    <script src="script.js"></script>
+    <script>app.mount('#app')</script>
+    
 
     </main>
 </body>
