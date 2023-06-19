@@ -14,10 +14,11 @@
   
     <main>
 
+      <div id='app'>
           <!-- PARTE DEL NAVEGADOR -->
 
       <nav class="nav">
-        <img class="nav_foto" src="Imagenes/imagen.png" alt="Imagen de globo">
+        <img class="nav_foto" :src="logo_Pagina" alt="Imagen de globo">
         <form class="nav_for">
         <input class="nav_input" type="text" id="inputUsuario" placeholder="Ingresar usuario..."> 
         </form>
@@ -25,11 +26,11 @@
 
         <!-- PARTE DE LA INFORMACION DEL USUARIO -->
 
-<div id='app'>
+
 
       <section class="seccion">
         <div class="secc_contenedor">
-          <img class="secc_foto" :src="imagen_Blog" alt="Imagen de usuario" width="200">
+          <img class="secc_foto" :src="imagen_Usuario" alt="Imagen de usuario" width="200">
         </div>
 
         <div class="secc_info">
@@ -48,7 +49,7 @@
         </div>
           
           <div class="secc_boton">
-            <button type="submit" class="secc_bot" id="btnSeguir" onclick="cambiarEstado()">Seguir</button>
+            <button type="submit" class="secc_bot" id="btnSeguir" @click="cambiarEstado()">Seguir</button>
           </div>
          
       </section>
@@ -61,7 +62,7 @@
         <img class="articulo_img" :src="imagen_Blog" alt="Imangen tokio" width="200"> <br/>
         
         <div class="aritulo_boton_likes">
-          <button type="submit" class="articulo_boton" onclick="meGusta()">Me gusta</button> 
+          <button type="submit" class="articulo_boton" @click="meGusta()">Me gusta</button> 
           <p class="articulo_likes"><span id="numLikes" class="likes_count">200</span> likes</p>
         </div>
         
@@ -77,7 +78,7 @@
 
         <input class="articulo_input" id="inputComentario" placeholder="Deja tu comentario...">
         
-        <button type="submit" onclick="comentar()" class="articulo_bot">Comentar</button>
+        <button type="submit" @click="comentar()" class="articulo_bot">Comentar</button>
       
       </article>
 
