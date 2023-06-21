@@ -39,6 +39,18 @@ app.component('info-blog',{
         ciudad: 'Tokio, Japon',
         imagen_Usuario:"./Imagenes/imagen2.jpeg",
 
-        }
+    }},
+        methods: {
+
+          cambiarEstado(){
+      
+            const btnSeguir = document.getElementById("btnSeguir")
+        
+            if (btnSeguir.innerHTML === "Seguir"){
+                btnSeguir.innerHTML = "Dejar de seguir"
+            } else {
+                btnSeguir.innerHTML = "Seguir"
+            }
+          }
     }
 })

@@ -26,7 +26,7 @@ app.component('publicacion-blog', {
         <button type="submit" @click="comentar()" class="articulo_bot">Comentar</button>
       
       </article>
-    </section>
+
     `,
     data(){
         return{
@@ -36,17 +36,6 @@ app.component('publicacion-blog', {
         }
     },
     methods: {
-
-      cambiarEstado(){
-  
-        const btnSeguir = document.getElementById("btnSeguir")
-    
-        if (btnSeguir.innerHTML === "Seguir"){
-            btnSeguir.innerHTML = "Dejar de seguir"
-        } else {
-            btnSeguir.innerHTML = "Seguir"
-        }
-      },
   
       meGusta() {
   
