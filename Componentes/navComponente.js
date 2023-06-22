@@ -16,7 +16,7 @@ app.component('nav-blog',{
         }
     },
     methods:{
-        keydown(){
+        keyup(){
         this.$emit('actualizar-nombre', this.nombreUsuario)}
     }
 })
