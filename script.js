@@ -9,7 +9,6 @@ const app = Vue.createApp({
     actualizarNombre(nombreUsuario){
         this.nombreUsuario= nombreUsuario
     },
-    
   }
 })
 

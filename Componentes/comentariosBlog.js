@@ -14,7 +14,7 @@ app.component('comentario-blog', {
     template:
     /*html*/
     `   <form class="review-form" @submit.prevent="comentar">
-        <div v-for="(comentario, indice) in comentarios" :key="indice">{{ comentario.nuevosUsuarios }}: {{ comentario.nuevosComentarios }}</div>
+        <div v-for="(comentario, indice) in comentarios" :key="indice"><strong>{{ comentario.nuevosUsuarios }}</strong>: {{ comentario.nuevosComentarios }}</div>
 
         <input class="articulo_input" id="inputComentario" placeholder="Deja tu comentario..." v-model="nuevoComentario">
         
@@ -31,7 +31,7 @@ methods: {
     comentar() {
       const advertencia = document.getElementById("advertencia");
   
-      if (this.nombreUsuario === "" || this.nuevoComentario.trim() === "") {
+      if (this.nombreUsuario === "" || this.nuevoComentario === "") {
         advertencia.style.display = "inline";
       } else {
         advertencia.style.display = "none";
@@ -42,6 +42,7 @@ methods: {
         };
   
         this.$emit('agregar-comentarios', datosComentario);
+
         this.nuevoComentario= " ";
       }
     }

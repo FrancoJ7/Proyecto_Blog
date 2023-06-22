@@ -54,7 +54,8 @@ app.component('publicacion-blog', {
        }
      },
      agregarComentarios(datosComentario){ //ESE REVIEW ES EL OBJETO QUE RECIBIMOS DE this.$emit('review-submitted', productoReview)
-      this.comentarios.push(datosComentario)                    //Y POR ULTIMO VA A CREAR UN COMPONENTE PARA MOSTRAR EL RESULTADO DE COMENTARIO
+      this.comentarios.push(datosComentario)                    //Y POR ULTIMO VA A CREAR UN COMPONENTE PARA MOSTRAR EL RESULTADO DE COMENTARIOS
+
     },
     }
 
