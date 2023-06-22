@@ -8,7 +8,8 @@ const app = Vue.createApp({
   methods: {
     actualizarNombre(nombreUsuario){
         this.nombreUsuario= nombreUsuario
-    }
+    },
+    
   }
 })
 
