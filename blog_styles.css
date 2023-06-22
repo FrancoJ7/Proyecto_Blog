@@ -190,6 +190,7 @@ html {
   height: 8%;
   background: #F6F4F4;
   padding: 1rem; 
+  margin-top: 0.5rem;
 }
 
 .articulo_input::placeholder {
@@ -211,6 +212,7 @@ html {
   color: var(--color-light);
   border-radius: 0.3rem;
   border: none;
+  margin-left: 0.5rem;
   padding: 0.5rem;
 }
 

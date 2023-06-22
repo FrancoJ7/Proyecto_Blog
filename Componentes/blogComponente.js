@@ -15,12 +15,10 @@ app.component('publicacion-blog', {
 
         <p><strong>Juan Perez</strong> ¡Wow, esa foto de tokio es impresionante! </p> <br>
         <p><strong>Kathleen J Rennie</strong> ¡Esta foto de Tokio es simplemente espectacular! Me trae tantos recuerdos.</p> <br>
-        
-        
-        <span id="advertencia" class="articulo_advertencia">Por favor, verificar que los campos nombre de usuario y comentarios esten completos.</span>
-      
+  
        <comentario-blog :comentarios="comentarios" :nombre-usuario="nombreUsuario"  @agregar-comentarios="agregarComentarios"></comentario-blog>
-
+  
+       <span id="advertencia" class="articulo_advertencia">Por favor, verificar que los campos nombre de usuario y comentarios esten completos.</span>
       </article>
 
     `,
