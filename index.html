@@ -16,14 +16,15 @@
       <div id='app'>
 
         <!-- PARTE DEL NAVEGADOR -->
-          <nav-blog> </nav-blog>
+        <nav-blog @actualizar-nombre="actualizarNombre"> </nav-blog>
 
         <!-- PARTE DE LA INFORMACION DEL USUARIO -->
         <info-blog> </info-blog>
 
         <!-- PARTE DEL BLOG -->
         <section class="blog">
-          <publicacion-blog> </publicacion-blog>
+
+        <publicacion-blog :nombre-usuario="nombreUsuario"> </publicacion-blog>
 
         <!-- PARTE DEL ARTICULO DEL BLOG-->
         <articulo-blog></articulo-blog>
@@ -37,7 +38,7 @@
     <script src="./Componentes/infoUsuarioComponente.js"></script>
     <script src="./Componentes/blogComponente.js"></script>
     <script src="./Componentes/articuloComponente.js"></script>
-  
+    <script src="./Componentes/comentariosBlog.js"></script>
 
     <!-- MONTAMOS LA APP -->
     <script>app.mount('#app')</script>

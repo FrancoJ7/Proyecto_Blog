@@ -1,8 +1,14 @@
 const app = Vue.createApp({
   data(){
 
-    return{}
+    return{
+      nombreUsuario: ""
+    }
   },
-  methods: {}
+  methods: {
+    actualizarNombre(nombreUsuario){
+        this.nombreUsuario= nombreUsuario
+    }
+  }
 })
 

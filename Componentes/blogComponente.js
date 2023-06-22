@@ -18,13 +18,9 @@ app.component('publicacion-blog', {
         
         
         <span id="advertencia" class="articulo_advertencia">Por favor, verificar que los campos nombre de usuario y comentarios esten completos.</span>
-        
-        <div id="comentario"> </div>
-
-        <input class="articulo_input" id="inputComentario" placeholder="Deja tu comentario...">
-        
-        <button type="submit" @click="comentar()" class="articulo_bot">Comentar</button>
       
+       <comentario-blog :comentarios="comentarios" :nombre-usuario="nombreUsuario"  @agregar-comentarios="agregarComentarios"></comentario-blog>
+
       </article>
 
     `,
@@ -32,9 +28,16 @@ app.component('publicacion-blog', {
         return{
             imagen_Blog: "./Imagenes/tokio.jpeg",
             tiempo_Publicacion: "Publicado hace 1 semana",
-            unMegusta: false
+            unMegusta: false,
+            comentarios:[]
         }
     },
+    props:{
+      nombreUsuario:{
+        type: String,
+        required: true
+      }
+    }, 
     methods: {
   
       meGusta() {
@@ -50,56 +53,8 @@ app.component('publicacion-blog', {
           this.unMegusta = true;
        }
      },
-  
-     comentar() {
-  
-      const inputUsuario = document.getElementById("inputUsuario").value;
-      const inputComentario = document.getElementById("inputComentario").value;
-      const advertencia = document.getElementById("advertencia");
-      const comentarios = document.getElementById("comentario");
-    
-      if (inputUsuario === "" || inputComentario === "") {
-  
-        advertencia.style.display = "inline";
-  
-      } else {
-  
-        advertencia.style.display = "none";
-    
-        const nuevoComentario = document.createElement("p");
-        const nombreUsuario = document.createTextNode(inputUsuario);
-        const comentarioUsuario = document.createTextNode(inputComentario);
-    
-        //EL ELEMENTO P LO AGREGO AL DIV
-        comentarios.appendChild(nuevoComentario);
-    
-        //CREO EL <STRONG> </STRONG>
-        const nombreUsuarioStrong = document.createElement("strong");
-        nombreUsuarioStrong.style.color = "black";
-  
-        //AGREGO EL STRONG AL P
-        nuevoComentario.appendChild(nombreUsuarioStrong);
-  
-       //AGREGO EL NOMBRE DEL USUARIO AL STRONG QUE YA ESTA EN EL P
-        nombreUsuarioStrong.appendChild(nombreUsuario);
-    
-        nuevoComentario.appendChild(document.createTextNode(" "));
-        nuevoComentario.appendChild(comentarioUsuario);
-  
-        //BOTON ELIMINAR 
-        const botonEliminar = document.createElement("button"); //CREO EL BOTON
-        botonEliminar.textContent = "Eliminar"; //LE UN TEXTO PARA MOSTRAR DENTRO DE EL
-  
-        botonEliminar.classList.add("eliminar"); //LE ASIGNO LA CLASE PARA LOS ESTILOS CSS
-  
-        nuevoComentario.appendChild(document.createTextNode(" ")); //ESPACIO ENTRE EL TEXTO Y EL BOTON
-        nuevoComentario.appendChild(botonEliminar); //Se agrega el botón de eliminar como un hijo del elemento <p> que representa el comentario.
-  
-        botonEliminar.addEventListener("click", () => { comentarios.removeChild(nuevoComentario)}) //Se agrega un evento de clic al botón de eliminar.
-        //Cuando se hace clic en el botón, se ejecuta una función anónima que elimina el comentario correspondiente al que se le dio clic.
-        
-        document.getElementById("inputComentario").value = ""; //SE LIMPIA EL CONTENIDO DEL INPUT
-         }
+     agregarComentarios(datosComentario){ //ESE REVIEW ES EL OBJETO QUE RECIBIMOS DE this.$emit('review-submitted', productoReview)
+      this.comentarios.push(datosComentario)                    //Y POR ULTIMO VA A CREAR UN COMPONENTE PARA MOSTRAR EL RESULTADO DE COMENTARIO
     },
     }
 
