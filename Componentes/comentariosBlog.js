@@ -31,7 +31,7 @@ methods: {
     comentar() {
       const advertencia = document.getElementById("advertencia");
   
-      if (this.nombreUsuario === "" || this.nuevoComentario === "") {
+      if (this.nombreUsuario === "" || this.nuevoComentario.trim() === "") {
         advertencia.style.display = "inline";
       } else {
         advertencia.style.display = "none";
