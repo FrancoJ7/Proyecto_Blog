@@ -9,10 +9,16 @@ app.component('nav-blog',{
         </form>
         </nav>
     `,
+    props: ['usuario'], 
     data(){
         return{
             nombreUsuario:""
         }
+    },
+    watch: {
+      usuario(nuevoValor){
+        this.nombreUsuario = nuevoValor
+      }
     },
     methods:{
         keyup(){

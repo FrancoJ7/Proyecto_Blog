@@ -16,7 +16,7 @@
       <div id='app'>
 
         <!-- PARTE DEL NAVEGADOR -->
-        <nav-blog @actualizar-nombre="actualizarNombre"> </nav-blog>
+        <nav-blog @actualizar-nombre="actualizarNombre" :usuario="nombreUsuario"> </nav-blog>
 
         <!-- PARTE DE LA INFORMACION DEL USUARIO -->
         <info-blog> </info-blog>
@@ -24,7 +24,7 @@
         <!-- PARTE DEL BLOG -->
         <section class="blog">
 
-        <publicacion-blog :nombre-usuario="nombreUsuario"> </publicacion-blog>
+        <publicacion-blog :nombre-usuario="nombreUsuario" @comentario-agregado="reiniciarUsuario()"> </publicacion-blog>
 
         <!-- PARTE DEL ARTICULO DEL BLOG-->
         <articulo-blog></articulo-blog>
