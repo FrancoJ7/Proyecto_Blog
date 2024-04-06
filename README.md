@@ -27,6 +27,9 @@ Para visualizar el blog, simplemente abre el archivo `index.html` en tu navegado
 - JavaScript: Para la funcionalidad interactiva del blog.
 - Vue.js: Para la creación de componentes interactivos y la gestión del estado de la aplicación.
 
+## Implementación en GitHub Pages
+
+Este proyecto está desplegado y disponible para acceder en GitHub Pages. 
 
 ## Características del Blog
 
