@@ -43,8 +43,10 @@ El blog GLOBO cuenta con las siguientes características principales:
 
 - **Comentarios:** Permite a los usuarios comentar en las publicaciones y artículos del blog, interactuando con otros usuarios y compartiendo opiniones.
 
-## Contribuciones
+## Contacto
 
-¡Las contribuciones son bienvenidas! Si deseas sugerir mejoras en el diseño, la funcionalidad o cualquier otro aspecto del blog, no dudes en abrir un issue o enviar una solicitud de extracción con tus cambios propuestos.
+Si tienes alguna pregunta, sugerencia o simplemente quieres comunicarte conmigo, no dudes en contactarme:
 
-¡Gracias por tu interés en el blog GLOBO!
+- Correo electrónico: fdjuarez33@gmail.com
+
+¡Gracias por visitar mi proyecto!
